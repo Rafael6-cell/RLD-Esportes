@@ -3,76 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site Incrível</title>
+    <title>Meu Projeto Online</title>
     <style>
-        /* Estilo básico para o site não ficar feio */
+        /* Variáveis de cores para facilitar mudanças */
+        :root {
+            --primaria: #2563eb;
+            --escura: #1e293b;
+            --clara: #f8fafc;
+            --texto: #334155;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            line-height: 1.6;
-            color: #333;
+            background-color: var(--clara);
+            color: var(--texto);
         }
+
+        /* Cabeçalho com Degradê */
         header {
-            background: #2c3e50;
+            background: linear-gradient(135deg, var(--escura), var(--primaria));
             color: white;
-            padding: 1rem;
+            padding: 60px 20px;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
+
+        header h1 { margin: 0; font-size: 2.5rem; }
+
+        /* Menu de Navegação */
         nav {
+            background: white;
             display: flex;
             justify-content: center;
-            background: #34495e;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
+
         nav a {
-            color: white;
-            padding: 14px 20px;
+            color: var(--escura);
+            padding: 15px 25px;
             text-decoration: none;
-            text-transform: uppercase;
+            font-weight: 600;
+            transition: 0.3s;
         }
+
         nav a:hover {
-            background: #1abc9c;
+            color: var(--primaria);
+            background: #eff6ff;
         }
+
+        /* Conteúdo Principal */
         .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 0 20px;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
         }
+
+        .botao {
+            display: inline-block;
+            background: var(--primaria);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: transform 0.2s;
+        }
+
+        .botao:hover {
+            transform: scale(1.05);
+            background: #1d4ed8;
+        }
+
         footer {
             text-align: center;
-            padding: 20px;
-            background: #f4f4f4;
-            margin-top: 20px;
+            padding: 40px;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        /* Ajuste para Celular */
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+            nav { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Bem-vindo ao Meu Site</h1>
+        <h1>Explorando o Digital</h1>
+        <p>Criando algo novo todos os dias</p>
     </header>
 
     <nav>
-        <a href="#">Início</a>
-        <a href="#">Sobre</a>
-        <a href="#">Serviços</a>
-        <a href="#">Contato</a>
+        <a href="#home">Início</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
     </nav>
 
-    <div class="container">
-        <h2>O que fazemos?</h2>
-        <p>Este é um exemplo de site criado com HTML e CSS. Você pode editar este texto para descrever o seu projeto ou empresa.</p>
+    <div class="container" id="home">
+        <h2>Bem-vindo ao Próximo Nível</h2>
+        <p>Agora nosso site tem uma estrutura mais limpa. Adicionamos <strong>CSS moderno</strong> para que a leitura seja agradável e o design pareça profissional.</p>
         
-        <h3>Por que nos escolher?</h3>
+        <p>O que mudamos:</p>
         <ul>
-            <li>Design Simples</li>
-            <li>Código Limpo</li>
-            <li>Fácil de Customizar</li>
+            <li>Cores em variáveis (fácil de trocar tudo de uma vez).</li>
+            <li>Menu que "gruda" no topo ao rolar a página.</li>
+            <li>Sombras para dar profundidade (efeito Card).</li>
         </ul>
+
+        <a href="#" class="botao">Saiba Mais</a>
     </div>
 
     <footer>
-        <p>&copy; 2026 Meu Site Online. Todos os direitos reservados.</p>
+        <p>&copy; 2026 - Desenvolvido com ❤️ e Código.</p>
     </footer>
 
 </body>
 </html>
+
+    
