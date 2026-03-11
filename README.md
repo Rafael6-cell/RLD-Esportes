@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Projeto Online</title>
+    <title>ESPORTES</title>
     <style>
         /* Variáveis de cores para facilitar mudanças */
         :root {
